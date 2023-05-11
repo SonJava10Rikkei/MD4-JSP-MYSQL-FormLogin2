@@ -9,7 +9,7 @@ public class User {
     private String username;
     private String email;
     private String password;
-    private String avatar;
+    private String avatar ="https://firebasestorage.googleapis.com/v0/b/nguyendanhson-9374f.appspot.com/o/avatar-default.avif?alt=media&token=b74a93ae-a451-4530-a41f-95b2901bdb8d";
     private Set<Role> roleSet = new HashSet<>();
 
     public User() {
@@ -30,6 +30,13 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.roleSet = roleSet;
+    }
+
+    public User(int id, String name, String avatar, Set<Role> roleSet) {
+        this.id = id;
+        this.name = name;
+        this.avatar = avatar;
         this.roleSet = roleSet;
     }
 
